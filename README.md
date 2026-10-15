@@ -32,12 +32,12 @@ The notebook includes:
 
 ## Machine Learning Workflow
 
-1. **Data preparation:** Handle missing arrival-delay values and encode categorical features using `LabelEncoder`.
+1. **Data preparation:** Impute missing arrival-delay values using the dataset median and encode categorical features using `LabelEncoder`.
 2. **Dataset splitting:** Create training, validation, and test subsets.
 3. **Feature scaling:** Apply `StandardScaler` to the individual classifier experiments.
 4. **Model training:** Train Logistic Regression, K-Nearest Neighbors, Support Vector Machine, Random Forest, and XGBoost classifiers.
 5. **Model evaluation:** Compare accuracy scores and examine classification reports and confusion matrices.
-6. **Ensemble learning:** Evaluate a soft-voting classifier combining Logistic Regression, KNN, SVM, Random Forest, and Gradient Boosting.
+6. **Ensemble learning:** Evaluate a soft-voting classifier combining Logistic Regression, KNN, SVM, Random Forest, and Gradient Boosting on a separate train/test split.
 
 ## Model Performance
 
@@ -84,8 +84,8 @@ Examples of input features:
 
 ## Project Files
 
-- `Airline_Customer_Satisfaction.ipynb` — exploratory analysis, preprocessing, model training, and evaluation
-- `airplane services.csv` — source passenger satisfaction dataset
+- [`notebooks/Airline_Customer_Satisfaction.ipynb`](notebooks/Airline_Customer_Satisfaction.ipynb) — exploratory analysis, preprocessing, model training, and evaluation
+- [`data/airplane services.csv`](data/airplane%20services.csv) — source passenger satisfaction dataset
 
 ## Author
 
