@@ -22,13 +22,25 @@ The project is designed to explore questions such as:
 
 ## Exploratory Data Analysis
 
-The notebook includes:
+The notebook includes dataset profiling, missing-value analysis, categorical comparisons, feature distributions, and correlation analysis. Selected visuals from the notebook are shown below.
 
-- Dataset structure, data types, and descriptive statistics
-- Missing-value analysis and median imputation for arrival delays
-- Categorical feature distributions and satisfaction comparisons
-- Continuous feature distributions and outlier exploration
-- Numeric feature correlation analysis and heatmap visualization
+### Passenger Satisfaction Distribution
+
+![Distribution of passenger satisfaction categories](images/01-satisfaction-distribution.png)
+
+*Distribution of satisfaction categories in the analyzed passenger records.*
+
+### Online Boarding and Passenger Satisfaction
+
+![Online boarding ratings by satisfaction category](images/02-online-boarding-vs-satisfaction.png)
+
+*Exploring how online boarding ratings vary across satisfaction categories.*
+
+### Feature Correlations
+
+![Correlation heatmap of encoded numerical features](images/03-correlation-heatmap.png)
+
+*Correlation structure of the numerical and encoded features used in the analysis.*
 
 ## Machine Learning Workflow
 
@@ -52,9 +64,17 @@ Test accuracy values recorded in the Jupyter notebook:
 | **XGBoost** | **96.43%** |
 | Soft Voting Ensemble | 93.73% |
 
-**XGBoost achieved the highest recorded test accuracy (96.43%)** among the evaluated approaches.
+![Model performance comparison with data labels](images/04-model-performance-comparison.png)
 
-The table reports the notebook's saved experiment outputs; the results have not been independently reproduced in a fresh environment.
+*Model comparison based on saved notebook outputs. XGBoost has the highest recorded test accuracy (96.43%).*
+
+### XGBoost Classification Results
+
+![XGBoost confusion matrix from the notebook](images/05-xgboost-confusion-matrix.png)
+
+*Confusion matrix saved in the notebook for the XGBoost classifier.*
+
+**Evaluation note:** These figures reflect the notebook's saved experiment outputs and have not been independently reproduced in a fresh environment. The soft-voting experiment uses a separate train/test split, so its result is not a strictly controlled like-for-like comparison with every individual classifier.
 
 ## Dataset
 
@@ -86,6 +106,7 @@ Examples of input features:
 
 - [`notebooks/Airline_Customer_Satisfaction.ipynb`](notebooks/Airline_Customer_Satisfaction.ipynb) — exploratory analysis, preprocessing, model training, and evaluation
 - [`data/airplane services.csv`](data/airplane%20services.csv) — source passenger satisfaction dataset
+- [`images/`](images/) — selected exploratory analysis and model evaluation figures
 
 ## Author
 
